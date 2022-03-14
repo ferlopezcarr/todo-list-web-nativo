@@ -1,0 +1,51 @@
+.new-task-container {
+    background-color: var(--light-grey-color);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.new-task-title {
+    font-size: 18px;
+}
+
+.new-task-form {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+}
+
+.new-task-form label {
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+.new-task-form input {
+    width: fit-content;
+    max-width: 400px;
+
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.new-task-form textarea {
+    width: fit-content;
+    min-height: 25px;
+    max-height: 200px;
+    max-width:  400px;
+
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.new-task-form select {
+    width: var(--min-input-width);
+}
+
+.new-task-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: visible;
+    margin-right: 15px;
+}

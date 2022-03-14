@@ -1,0 +1,15 @@
+.hide-task-list {
+    background-color: #e6f0ff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.hide-task-list-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.hide-task-list-container .task-status {
+    font-size: 12px;
+}

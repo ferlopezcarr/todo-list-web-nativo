@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #095ad2;
+    --primary-color-dark: #0b4eb3;
+    --primary-color-darker: #103d81;
+
+    --secondary-color: #1d1d1a;
+
+    --error-color: #e01212;
+
+    --darker-grey-color: #555555;
+    --dark-grey-color: #9c9c9c;
+    --grey-color: #e4e4e4;
+    --light-grey-color: #f8f8f8;
+    --light: #FFFFFF;
+
+    --min-input-width: 80px;
+    --max-input-width: 200px;
+
+    --border-radius: 20px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+    font-family: Arial;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+.input-error {
+    font-size: 12px;
+    color: var(--error-color);
+}
+.input-error::first-letter {
+    text-transform:capitalize;
+}
+
+button.primary {
+    background-color: var(--primary-color);
+    color: var(--light);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 5px 8px;
+}
+
+button.icon-button {
+    background-color: var(--primary-color);
+    color: var(--light);
+    border: none;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.task-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 15px;
+}
+
+.task-button {
+    align-self: flex-start;
+    margin: 8px 0 0;
+}

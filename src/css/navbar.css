@@ -1,0 +1,29 @@
+header {
+    background-color: var(--primary-color);
+    color: var(--light);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.navbar-button {
+    border: none;
+    border-radius: 50%;
+    background: none;
+    color: var(--light);
+    font-size: 20px;
+    padding: 5px 8px;
+}
+.navbar-button:hover {
+    background-color: var(--primary-color-dark);
+}
+.navbar-button.active {
+    background-color: var(--primary-color-darker);
+}
+
+.app-title {
+    font-size: 22px;
+    font-family: Courier New;
+}

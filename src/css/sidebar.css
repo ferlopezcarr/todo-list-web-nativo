@@ -1,0 +1,17 @@
+.sidebar {
+    height: 100%;
+    width: 100%;
+    max-width: 20%;
+    float: left;
+    overflow: auto;
+
+    background-color: var(--grey-color);
+    color: #000000;
+}
+
+@media (max-width: 812px) {
+    .sidebar {
+        position: absolute;
+        max-width: 800px;
+    }
+}

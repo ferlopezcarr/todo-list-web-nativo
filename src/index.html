@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TODO List App</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/new-task-form.css">
+        <link rel="stylesheet" href="css/new-task-modal.css">
+        <link rel="stylesheet" href="css/task-list.css">
+        <link rel="stylesheet" href="css/hide-task-list.css">
+        <link rel="stylesheet" href="css/task.css">
+    </head>
+    <body>
+        <header>
+            <button id="navbar-menu-button" class="navbar-button">&#9776</button>
+            <span class="app-title">TODO List App</span>
+            <div></div>
+        </header>
+
+        <section id="sidebar-menu" class="sidebar hidden">
+        </section>
+
+        <section>
+            <div class="new-task-container">
+                <span class="new-task-title">Add new task</span>
+                <form id="new-task-form" class="new-task-form">
+                    <div class="new-task-col">
+                        <label for="new-task-status">Task status</label>
+                        <select id="new-task-status">
+                        </select>
+                        <span id="new-task-status-error" class="invisible input-error">Status error</span>
+                    </div>
+                    <div class="new-task-col">
+                        <label for="new-task-name">Task name</label>
+                        <input id="new-task-name" type="text" placeholder="Task name">
+                        <span id="new-task-name-error" class="invisible input-error">Name error</span>
+                    </div>
+                    <div class="new-task-col">
+                        <label for="new-task-description">Task description</label>
+                        <textarea id="new-task-description" placeholder="Task description"></textarea>
+                        <span id="new-task-description-error" class="invisible input-error">Description error</span>
+                    </div>
+                </form>
+                <button id="new-task-form-button" class="primary task-button">+ New Task</button>
+            </div>
+
+            <div class="hide-task-list">
+                <div id="hide-task-list-container" class="hide-task-list-container">
+<!--                     <span class="task-status">&#x1F441 Show all&nbsp;</span>
+                    <span class="task-status invisible"></span>
+                    <span class="task-status">&#x1F441 Hide all&nbsp;</span>
+                    <span class="task-status invisible"></span> -->
+                </div>
+            </div>
+            
+            <div class="task-list-container">
+            </div>
+        </section>
+
+        <div id="modal-container" class="modal-container hidden">
+            <div id="new-task-modal" class="modal hidden">
+                <div class="modal-title">
+                    <span>Add new task</span>
+                    <button class="close-modal-button">X</button>
+                </div>
+                <hr>
+                <div>
+                    <form id="new-task-modal-form" class="modal-form">
+                        <label for="new-task-modal-name">Task name</label>
+                        <input id="new-task-modal-name" type="text" placeholder="Task name">
+                        <span id="new-task-error-no-name" class="hidden input-error">No task name provided</span>
+                        <label for="new-task-modal-description">Task description</label>
+                        <textarea id="new-task-modal-description" placeholder="Task description"></textarea>
+                    </form>
+                </div>
+                <div class="modal-actions">
+                    <button id="new-task-modal-button" class="primary task-button">+ New Task</button>
+                </div>
+            </div>
+            <div id="delete-task-modal" class="modal hidden">
+                <div class="modal-title">
+                    <span>Delete task</span>
+                    <button class="close-modal-button">X</button>
+                </div>
+                <hr>
+                <div>
+                    <div class="task-col">
+                        <span>You are sure you want to delete this task list?</span>
+                        <span id="delete-task-name"></span>
+                    </div>
+                    <form id="delete-task-modal-form" class="modal-form">
+                        <label for="delete-phrase-confirmation">Type "YES"</label>
+                        <input id="delete-phrase-confirmation" type="text" placeholder="YES">
+                    </form>
+                </div>
+                <div class="modal-actions">
+                    <button id="delete-task-modal-button" class="primary task-button delete-task-button">
+                        &#128465; Delete Task
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="templates-container" class="hidden">
+            <div id="taskListToClone" class="task-list">
+                <div class="task-title-container">
+                    <span class="task-list-title">Task list title</span>
+                    <div class="actions-container">
+                        <button class="icon-button add-task-button">+</button>
+                        <button class="icon-button delete-task-button">&#128465;</button>
+                    </div>
+                </div>
+                <ul id="tasks-list-id" class="task-container">
+                </ul>
+            </div>
+
+            <li id="taskToClone" class="task">
+                <div>
+                    <span class="task-name">Task name</span>
+                    <span class="task-status">todo</span>
+                    <p class="task-description">Task Description</p>
+                </div>
+                <div class="task-action-container">
+                    <button class="task-higher-priority">&#x25b2;</button>
+                    <button class="task-lower-priority">&#x25BC;</button>
+                </div>
+            </li>
+        </div>
+
+        <!-- Scripts -->
+        <script src="js/models/task.model.js" type="text/javascript"></script>
+        <script src="../data/data.js" type="text/javascript"></script>
+        <script src="js/validators/validator.js" type="text/javascript"></script>
+        <script src="js/validators/task.validator.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/navbar.js" type="text/javascript"></script>
+    </body>
+</html>

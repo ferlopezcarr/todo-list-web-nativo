@@ -1,0 +1,36 @@
+.task-list-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.task-list {
+    padding: 8px;
+}
+
+.task-list-title {
+    border-radius: var(--border-radius);
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.task-title-container {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.actions-container {
+    display: inline-flex;
+    justify-content: center;
+    height: auto;
+}
+
+.task-container {
+    margin: 0;
+    padding: 0;
+}
+
+button.delete-task-button {
+    background-color: var(--error-color);
+}
